@@ -101,6 +101,8 @@ namespace backendbrzina.Controllers
             _repository.Delete(festival);
             return Ok();
         }
+
+        //new line
         [Route("api/SmallestTwo")]
         public IEnumerable<Festival> GetSmallestTwo()
         {
