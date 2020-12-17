@@ -52,6 +52,16 @@ namespace backendbrzina.Controllers
             _repository.Add(festival);
             return CreatedAtRoute("DefaultApi", new { id = festival.Id }, festival);
         }
+        public IHttpActionResult PostGitproba(Festival festival)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            _repository.Add(festival);
+            return CreatedAtRoute("DefaultApi", new { id = festival.Id }, festival);
+        }
 
 
         public IHttpActionResult Put(int id, Festival festival)
